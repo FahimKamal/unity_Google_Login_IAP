@@ -13,7 +13,9 @@ public class PlayGamesManager : MonoBehaviour{
     }
 
     private void SignIn(){
-        PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
+        // PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
+        
+        PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication);
     }
     
     internal void ProcessAuthentication(SignInStatus status) {
